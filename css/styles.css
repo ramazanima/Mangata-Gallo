@@ -1,0 +1,178 @@
+/* Universal Rules */
+body {
+  background-color: hsl(0, 100%, 100%);
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 3rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1em;
+}
+
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+  header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 150px;
+  }
+}
+
+nav {
+  border-radius: 12px;
+  background-color: hsl(326, 84%, 78%);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  text-align: center;
+  height: 8vh;
+}
+
+nav li {
+  height: 48px;
+  width: 80px;
+  margin-left: 5%;
+}
+nav ul li a {
+  display: block;
+  margin-top: 25%;
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 680;
+}
+nav ul li a:hover {
+  color: hsl(327, 97%, 63%);
+}
+
+@media only screen and (max-width: 600px) {
+  nav li a {
+    display: block;
+    margin-top: 25%;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 680;
+  }
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 1;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* 
+  Promotional Banner Blurry Article Rules */
+#blur-article {
+  background-image: url("https://www.crazyseconds.com/pub/media/catalog/category/Banner_jewellery.jpg");
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+}
+#blur-article:hover {
+  background-image: url("https://www.crazyseconds.com/pub/media/catalog/category/Banner_jewellery.jpg");
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0px);
+}
+#blur-article > h1 {
+  text-align: center;
+}
+
+#blur-article h1 > span {
+  animation: animation 5s ease-in infinite;
+}
+
+@keyframes animation {
+  0% {
+    color: black;
+  }
+  25% {
+    color: rgb(117, 3, 48);
+  }
+  50% {
+    color: rgb(234, 80, 106);
+  }
+  75% {
+    color: rgb(235, 144, 158);
+  }
+  100% {
+    color: black;
+  }
+}
+
+#blur-article > p {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Item Articles Rules */
+.cards {
+  border: 1px solid #c2c2c2;
+  border-radius: 10, 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 1%;
+  border-radius: 25px 1px 25px 1px;
+  margin: 5px;
+}
+
+/* Cards Hover State Rules */
+.cards:hover {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  transition: 0.5s ease;
+}
+.cards > img {
+  border-radius: 25px 1px 25px 1px;
+}
+
+/* Footer Rules */
+footer {
+  display: flex;
+  align-items: center;
+}
+footer div {
+  flex: 1;
+  padding: 10px;
+}
+footer div p {
+  text-align: right;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
